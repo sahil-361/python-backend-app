@@ -15,5 +15,5 @@ phases:
 
 artifacts:
   files:
-    - '**/*'
+    - myapp.zip
   discard-paths: yes
