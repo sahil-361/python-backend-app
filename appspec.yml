@@ -16,6 +16,6 @@ hooks:
       runas: root
 
   ApplicationStop:
-    - location: scripts/stop_flask.sh  # Stop Flask app
+    - location: scripts/stop_flask1.sh  # Stop Flask app
       timeout: 300
       runas: root
