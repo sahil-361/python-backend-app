@@ -1,20 +1,21 @@
 version: 0.0
 os: linux
 files:
-  - source: /
-    destination: /web/
+  - source: /    # All files from the source (GitHub/S3)
+    destination: /home/ec2-user/myapp  # Destination directory on EC2 instance
+
 hooks:
   AfterInstall:
-    - location: scripts/mkdir.sh
+    - location: scripts/install_dependencies.sh  # Install dependencies
       timeout: 300
       runas: root
+
   ApplicationStart:
-    - location: scripts/start_flask.sh
+    - location: scripts/start_flask.sh  # Start Flask app
       timeout: 300
       runas: root
-   ApplicationStop:
-     - location: scripts/stop_flask1.sh
-       timeout: 300
-       runas: root
 
-
+  ApplicationStop:
+    - location: scripts/stop_flask.sh  # Stop Flask app
+      timeout: 300
+      runas: root
