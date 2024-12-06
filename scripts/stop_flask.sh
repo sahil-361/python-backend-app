@@ -2,4 +2,4 @@
 # stop_flask.sh
 
 # Kill the Flask app process
-pkill -f 'python app.py'
+pkill -f 'flask run'
