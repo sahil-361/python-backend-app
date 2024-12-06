@@ -3,26 +3,3 @@ os: linux
 files:
   - source: /    # All files from the source (GitHub/S3)
     destination: /home/ec2-user/myapp  # Destination directory on EC2 instance
-
-hooks:
-  BeforeInstall:
-    - location: scripts/cleanup_old_files.sh  # Cleanup old files or do any prep work
-      timeout: 300
-      runas: root
-  Install:
-    - location: scripts/install_dependencies.sh  # Install dependencies
-      timeout: 300
-      runas: root
-  AfterInstall:
-    - location: scripts/after_install_tasks.sh  # Install dependencies
-      timeout: 300
-      runas: root
-  ApplicationStart:
-    - location: scripts/start_flask.sh  # Start Flask app
-      timeout: 300
-      runas: root
-
-  ApplicationStop:
-    - location: scripts/stop_flask1.sh  # Stop Flask app
-      timeout: 300
-      runas: root
