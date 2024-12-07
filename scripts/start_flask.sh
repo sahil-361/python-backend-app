@@ -1,8 +1,6 @@
 #!/bin/bash
 # start_flask.sh
 
-# Activate the virtual environment
-source /home/ec2-user/myapp/venv/bin/activate
-
-# Start the Flask application
-flask run
+cd /home/ec2-user/myapp
+source venv/bin/activate
+nohup python app.py > app.log 2>&1 &  # Run Flask app in the background
