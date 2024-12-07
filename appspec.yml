@@ -14,14 +14,14 @@ hooks:
       timeout: 300
       runas: root
   AfterInstall:
-    - location: scripts/after_install_tasks.sh  # Install dependencies
+    - location: scripts/install_dependencies.sh  # Install dependencies
       timeout: 300
       runas: root
   ApplicationStart:
     - location: scripts/start_flask.sh  # Start Flask app
       timeout: 300
       runas: root
-      
+
   ApplicationStop:
     - location: scripts/stop_flask.sh  # Stop Flask app
       timeout: 300
