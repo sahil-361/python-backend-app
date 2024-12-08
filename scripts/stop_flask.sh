@@ -1,6 +1,5 @@
-#!/usr/bin/python
-import requests
+#!/bin/bash
+# stop_flask.sh
 
-requests.post("http://127.0.0.1/shutdown")
-
-
+# Kill the Flask app process
+pkill -f 'python app.py'
