@@ -10,4 +10,3 @@ else
     echo "Stopping Flask app with PID: $FLASK_PID"
     kill $FLASK_PID
     echo "Flask app stopped."
-fi
