@@ -5,4 +5,4 @@
 FLASK_PID=$(ps aux | grep 'python app.py' | grep -v grep | awk '{print $2}')
 echo "Stopping Flask app with PID: $FLASK_PID"
 kill $FLASK_PID
-echo "Flask app stopped."
+echo "Flask app stopped"
