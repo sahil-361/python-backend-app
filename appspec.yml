@@ -9,7 +9,7 @@ hooks:
     - location: scripts/cleanup_old_files.sh  # Cleanup old files or do any prep work
       timeout: 300
       runas: root
-  Install:
+  AfterInstall:
     - location: scripts/install_dependencies.sh  # Install dependencies
       timeout: 300
       runas: root
